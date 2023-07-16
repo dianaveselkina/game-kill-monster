@@ -3,7 +3,6 @@ const screens = document.querySelectorAll('.screen')
 const timeList = document.querySelector('#time-list')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
-const colors = ['green', 'red', 'blue', ' yellow','white']
 let time = 0
 let score = 0
 
@@ -20,15 +19,15 @@ if(event.target.classList.contains('time-btn')){
 })
 
 board.addEventListener('click', event => {
-if (event.target.classList.contains('circle')){
+if (event.target.classList.contains('monster')){
   score++
   event.target.remove()
-  createRandomCircle()
+  createRandomMonster()
 }
 })
 function startGame() {
  setInterval(decreaseTime, 1000)
- createRandomCircle()
+ createRandomMonster()
  setTime (time)
 }
 
@@ -52,29 +51,25 @@ function finishGame() {
 board.innerHTML =`<h1>Cчет: <span class="primary">${score}</span></h1>`
 }
 
-function createRandomCircle(){
-  const circle = document.createElement('div')
-  const size = getRandomNumber(10,60)
+function createRandomMonster(){
+  const monster = document.createElement('div')
+  const size = getRandomNumber(50,100)
   const {width, height} = board.
   getBoundingClientRect()
   const x = getRandomNumber(0, width-size)
   const y = getRandomNumber(0, height-size)
 
-  circle.classList.add('circle')
-  circle.style.width = `${size}px`
-  circle.style.height = `${size}px`
-  circle.style.top = `${y}px`
-  circle.style.left = `${x}px`
-  circle.style.background = getRandomColor ()
+  monster.style.width = `${size}px`
+  monster.style.height = `${size}px`
+  monster.style.top = `${y}px`
+  monster.style.left = `${x}px`
+  monster.classList.add('monster')
+ 
   
-  board.append(circle)
+  board.append(monster)
 }
 function getRandomNumber(min, max) {
   return Math.round(Math.random() * (max-min) + min)
 }
 
 
-function getRandomColor () {
-  const index = Math.floor(Math.random() * colors.length)
-  return colors[index]
-}

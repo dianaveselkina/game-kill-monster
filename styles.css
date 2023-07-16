@@ -5,7 +5,7 @@
 }
 
 body {
-  color: #fff;
+  color:#ffffff;
   font-family: "Khula", sans-serif;
   height: 100vh;
   overflow: hidden;
@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #16d9e3;
+  color: #e7890d;
 }
 
 .start {
@@ -69,8 +69,8 @@ h1 {
 }
 
 .time-btn:hover {
-  border: 2px solid #16d9e3;
-  color: #16d9e3;
+  border: 2px solid #e7890d;
+  color: #e7890d;
 }
 
 .hide {
@@ -78,7 +78,7 @@ h1 {
 }
 
 .primary {
-  color: #16d9e3;
+  color: #fdfdfc;
 }
 
 .board {
@@ -88,15 +88,16 @@ h1 {
   position: relative;
   width: 500px;
   height: 500px;
-  background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
-  box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+  background:  url(/img/orange.JPG);
+  background-size: cover;
+  box-shadow: -8px -8px 20px #e7890d, 10px 7px 20px #d3e01f;
   border-radius: 30px;
   overflow: hidden;
 }
 
-.circle {
-  background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+.monster {
+  background: url(/img/monster3.png);
+  background-size: cover;
   position: absolute;
-  border-radius: 50%;
   cursor: pointer;
 }
