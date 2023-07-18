@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color:#ffffff;
+  font-family: cursive;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e7890d;
+}
+
+.start {
+  font-size: 1.5rem;
+}
+
+h1 {
+  line-height: 1.4;
+  font-size: 4rem;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+  background-image: url(img/background.png);
+  background-size: cover;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.time-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.time-list li {
+  margin: 10px;
+}
+
+.time-btn {
+  background-color: transparent;
+  border: 2px solid #c0c0c0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.time-btn:hover {
+  border: 2px solid #e7890d;
+  color: #e7890d;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.primary {
+  color: #fdfdfc;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 450px;
+  height: 450px;
+  background-image: url(img/orange.jpg);
+  background-size: cover;
+  box-shadow: -8px -8px 20px #e7890d, 10px 7px 20px #d3e01f;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.monster {
+  background-image: url(img/monster3.png);
+  background-size: cover;
+  position: absolute;
+  cursor: pointer;
+}
